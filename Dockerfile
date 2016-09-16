@@ -8,9 +8,10 @@ ENV NGROK_DOMAIN "ngrok.xuehuwang.com"
 ENV HTTP_ADDR ":80"
 
 WORKDIR /usr/local/src/
-COPY go1.7.linux-amd64.tar.gz /usr/local/src/
+
+#COPY go1.7.linux-amd64.tar.gz /usr/local/src/
 #下载golang
-RUN wget -q  http://libs.xuehuwang.com/go1.7.linux-amd64.tar.gz && \
+RUN wget -q  https://storage.googleapis.com/golang/go1.7.1.linux-amd64.tar.gz && \
 	tar zxvf go1.7.linux-amd64.tar.gz -C /usr/local
 
 RUN git clone https://github.com/inconshreveable/ngrok.git && \
